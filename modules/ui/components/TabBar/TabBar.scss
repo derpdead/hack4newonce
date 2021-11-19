@@ -1,9 +1,11 @@
+@import './Item/TabBarItem';
+
 .tab-bar {
 	position: fixed;
 	bottom: 0;
 	display: flex;
 	width: 100%;
-	height: calc(42px + env(safe-area-inset-bottom));
+	height: calc(58px + env(safe-area-inset-bottom));
 	padding: 8px;
-	background-color: $LIGHT_BLUE;
+	background-color: $VIOLET_50;
 }

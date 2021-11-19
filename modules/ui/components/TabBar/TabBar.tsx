@@ -1,6 +1,11 @@
 import { FC } from 'react';
 
-import { faHamburger } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCompactDisc,
+    faCrown,
+    faHamburger,
+    faMicrophone,
+} from '@fortawesome/free-solid-svg-icons';
 import TabBarItem from '@UI/components/TabBar/Item/TabBarItem';
 
 const TabBar: FC = () => {
@@ -16,15 +21,15 @@ const TabBar: FC = () => {
                 title={'Radio'}
                 href={'/radio'} />
             <TabBarItem
-                icon={faHamburger}
+                icon={faMicrophone}
                 title={'Podcasty'}
                 href={'/podcasts'} />
             <TabBarItem
-                icon={faHamburger}
+                icon={faCompactDisc}
                 title={'Baza muzyczna'}
-                href={'/music-base'} />
+                href={'/'} />
             <TabBarItem
-                icon={faHamburger}
+                icon={faCrown}
                 title={'Klub'}
                 href={'/club'} />
         </nav>

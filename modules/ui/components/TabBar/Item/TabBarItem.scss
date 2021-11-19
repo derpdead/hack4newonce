@@ -3,4 +3,14 @@
 	flex: 1;
 	flex-direction: column;
 	align-items: center;
+	text-decoration: none;
+
+	&__title {
+		font: $FONT_700_9_10;
+		color: $VIOLET_700;
+	}
+
+	&--selected &__title {
+		color: $BLUE;
+	}
 }
