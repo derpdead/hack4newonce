@@ -12,6 +12,7 @@ import usePopularArtists from '@Artists/hooks/usePopularArtists';
 import { IArtistModel } from '@Artists/service/models';
 import useResizeObserver from '@react-hook/resize-observer';
 import { Button } from '@UI/components';
+import Link from 'next/link';
 import {
     Swiper,
     SwiperSlide,
@@ -69,25 +70,27 @@ const PopularArtistsSlider: FC = () => {
                                 {
                                     artists.map(artist =>
                                         <SwiperSlide key={artist.id}>
-                                            <>
-                                                {
-                                                    artist.image.url &&
+                                            <Link href={artist.slug}>
+                                                <a>
+                                                    {
+                                                        artist.image.url &&
                                                         <ArtistThumb
                                                             width={itemWidth}
                                                             height={100}
                                                             objectFit={'cover'}
                                                             src={artist.image.url} />
-                                                }
-                                                {
-                                                    !artist.image.url &&
+                                                    }
+                                                    {
+                                                        !artist.image.url &&
                                                         <div
                                                             style={{
                                                                 height: '100px',
                                                                 width: `${itemWidth}px`,
                                                                 backgroundColor: 'rebeccapurple',
                                                             }} />
-                                                }
-                                            </>
+                                                    }
+                                                </a>
+                                            </Link>
                                         </SwiperSlide>,
                                     )
                                 }

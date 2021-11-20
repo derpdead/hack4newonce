@@ -35,7 +35,7 @@ const TabBarItem: FC<ITabBarItemProps> = ({
                 <FontAwesomeIcon
                     icon={icon}
                     color={isSelected ? BLUE : VIOLET_700}
-                    size={'2x'} />
+                    size={'1x'} />
                 <span className={'tab-bar-item__title'}>
                     {title}
                 </span>

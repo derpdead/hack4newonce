@@ -6,8 +6,9 @@
 	text-decoration: none;
 
 	&__title {
-		font: $FONT_700_9_10;
+		font: $FONT_600_9_10;
 		color: $VIOLET_700;
+		margin-top: 4px;
 	}
 
 	&--selected &__title {
