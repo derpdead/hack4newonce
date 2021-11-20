@@ -5,6 +5,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { DefaultLayout } from '@UI/components';
 import type { AppProps } from 'next/app';
 
+import 'swiper/css';
+
 config.autoAddCss = false;
 
 function MyApp({
