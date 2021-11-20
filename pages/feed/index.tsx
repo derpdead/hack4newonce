@@ -1,11 +1,13 @@
 import { FC } from 'react';
 
+import { Page } from '@UI/components';
+
 const Feed: FC = ({ children }) => {
 
     return (
-        <div className={'feed'}>
+        <Page>
             {children}
-        </div>
+        </Page>
     );
 };
 

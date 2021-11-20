@@ -1,11 +1,13 @@
 import { FC } from 'react';
 
+import { Page } from '@UI/components';
+
 const Radio: FC = ({ children }) => {
 
     return (
-        <div className={'radio'}>
+        <Page>
             {children}
-        </div>
+        </Page>
     );
 };
 

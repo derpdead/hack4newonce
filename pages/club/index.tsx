@@ -1,11 +1,13 @@
 import { FC } from 'react';
 
+import { Page } from '@UI/components';
+
 const Club: FC = ({ children }) => {
 
     return (
-        <div className={'club'}>
+        <Page>
             {children}
-        </div>
+        </Page>
     );
 };
 
