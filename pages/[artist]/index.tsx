@@ -34,7 +34,7 @@ const Artist: FC<IArtistProps> = ({ artist }) => {
         <Page>
             <ToolBar
                 title={artist.name}
-                backRoute={'/'}
+                backRoute={true}
                 appendHeader={
                     <FontAwesomeIcon
                         icon={faHeart}

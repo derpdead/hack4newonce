@@ -1,12 +1,15 @@
 import { FC } from 'react';
 
-import { Page } from '@UI/components';
+import {
+    Page,
+    ToolBar,
+} from '@UI/components';
 
-const Club: FC = ({ children }) => {
+const Club: FC = () => {
 
     return (
         <Page>
-            {children}
+            <ToolBar title={'Klub'} />
         </Page>
     );
 };

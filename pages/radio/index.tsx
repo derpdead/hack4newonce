@@ -1,12 +1,15 @@
 import { FC } from 'react';
 
-import { Page } from '@UI/components';
+import {
+    Page,
+    ToolBar,
+} from '@UI/components';
 
-const Radio: FC = ({ children }) => {
+const Radio: FC = () => {
 
     return (
         <Page>
-            {children}
+            <ToolBar title={'Radio'} />
         </Page>
     );
 };

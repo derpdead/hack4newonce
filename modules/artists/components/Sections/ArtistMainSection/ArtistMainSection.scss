@@ -1,4 +1,5 @@
 .artist-main-section {
+	padding: 0 8px;
 
 	&__header {
 		display: flex;
@@ -32,6 +33,24 @@
 	&__scope-value {
 		color: $BLUE;
 		font: $FONT_500_32_38;
-		margin-left: 4px;
+		margin-left: 8px;
+	}
+
+	&__members {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 72px);
+		grid-gap: 24px;
+		margin-bottom: 24px;
+	}
+
+	&__member {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__member-name {
+		font: $FONT_500_13_16;
+		margin-top: 8px;
 	}
 }

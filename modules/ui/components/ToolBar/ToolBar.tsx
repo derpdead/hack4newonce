@@ -5,13 +5,13 @@ import {
 
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { BLACK } from '@/defaults/colors';
 
 interface IToolBarProps {
     title: string;
-    backRoute?: string;
+    backRoute?: boolean;
     appendHeader?: ReactNode;
 }
 
@@ -20,18 +20,24 @@ const ToolBar: FC<IToolBarProps> = ({
     title,
     appendHeader,
 }) => {
+    const router = useRouter();
+
+    const onClick = () => {
+        router.back();
+    };
+
     return (
         <div className={'tool-bar'}>
             {
                 backRoute &&
-                <Link href={backRoute}>
-                    <a className={'tool-bar__back'}>
-                        <FontAwesomeIcon
-                            icon={faArrowLeft}
-                            color={BLACK}
-                            size={'1x'} />
-                    </a>
-                </Link>
+                <button
+                    className={'tool-bar__back'}
+                    onClick={onClick}>
+                    <FontAwesomeIcon
+                        icon={faArrowLeft}
+                        color={BLACK}
+                        size={'1x'} />
+                </button>
             }
             <div className={'tool-bar__header'}>
                 <span className={'tool-bar__title'}>{title}</span>
