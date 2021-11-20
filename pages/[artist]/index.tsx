@@ -56,9 +56,14 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-    const artist = await getArtist(context.params.artist);
+    try {
 
-    return { props: { artist } };
+        const artist = await getArtist(context.params.artist);
+
+        return { props: { artist } };
+    } catch (e) {
+        return { notFound: true };
+    }
 };
 
 export default Artist;

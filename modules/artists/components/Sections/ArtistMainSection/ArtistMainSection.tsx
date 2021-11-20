@@ -50,7 +50,7 @@ const ArtistMainSection: FC<IArtistMainSectionProps> = ({
                 </div>
             </div>
             {
-                members.length > 0 &&
+                (members || []).length > 0 &&
                 <Section
                     title={'Członkowie'}
                     body={
