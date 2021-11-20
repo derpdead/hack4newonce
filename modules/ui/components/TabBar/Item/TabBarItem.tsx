@@ -23,7 +23,7 @@ const TabBarItem: FC<ITabBarItemProps> = ({
     href,
 }) => {
     const router = useRouter();
-    const isSelected = (router.pathname.includes(href) && href !== '/') || (router.pathname === href);
+    const isSelected = (router.pathname.includes(href) && href !== '/') || router.pathname === href || (router.pathname === '/[artist]' && href === '/');
     const classes = classNames(
         'tab-bar-item',
         { 'tab-bar-item--selected': isSelected },
