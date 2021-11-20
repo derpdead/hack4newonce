@@ -1,3 +1,4 @@
+import ArtistMainSection from '@Artists/components/Sections/ArtistMainSection/ArtistMainSection';
 import SocialSections from '@Artists/components/Sections/SocialSections/SocialSections';
 import ActivitySlider from '@Artists/components/Sliders/ActivitySlider/ActivitySlider';
 import FriendsActivitySlider from '@Artists/components/Sliders/FriendsActivitySlider/FriendsActivitySlider';
@@ -6,6 +7,7 @@ import PopularArtistsSlider from '@Artists/components/Sliders/PopularArtistsSlid
 import ArtistThumb from '@Artists/components/Thumbs/ArtistsThumb/ArtistThumb';
 
 export {
+    ArtistMainSection,
     ObserversActivitySlider,
     ActivitySlider,
     FriendsActivitySlider,

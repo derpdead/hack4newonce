@@ -19,6 +19,9 @@
       "@Artists/*": [
         "./modules/artists/*"
       ],
+      "@Releases/*": [
+        "./modules/releases/*"
+      ],
       "@UI/*": [
         "./modules/ui/*"
       ],

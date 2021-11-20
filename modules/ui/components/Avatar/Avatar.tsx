@@ -6,7 +6,8 @@ import Image, { ImageProps } from 'next/image';
 type IAvatarProps = ImageProps;
 
 const Avatar: FC<IAvatarProps> = ({
-    src, ...rest
+    src,
+    ...rest
 }) => {
     const classes = classNames(
         'avatar',
@@ -15,7 +16,12 @@ const Avatar: FC<IAvatarProps> = ({
 
     if (!src) {
         return (
-            <div className={classes} />
+            <div
+                style={{
+                    width: `${rest.width}px`,
+                    height: `${rest.height}px`,
+                }}
+                className={classes} />
         );
     }
 

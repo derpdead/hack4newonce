@@ -1,11 +1,21 @@
 .tool-bar {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-direction: column;
 	width: 100%;
+	padding: 12px 16px;
 
 	&__title {
 		font: $FONT_700_24_28;
 		color: #000;
+	}
+
+	&__back {
+		margin-bottom: 8px;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }

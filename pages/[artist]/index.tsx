@@ -1,18 +1,29 @@
 import { FC } from 'react';
 
+import { ArtistMainSection } from '@Artists/components';
 import { IArtistModel } from '@Artists/service/models';
 import {
     getArtist,
     getPopularArtists,
 } from '@Artists/service/requests';
-import { Page } from '@UI/components';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import useMostRatedReleases from '@Releases/hooks/useMostRatedReleases';
+import {
+    Page,
+    ToolBar,
+} from '@UI/components';
 import { useRouter } from 'next/router';
+
+import { BLUE } from '@/defaults/colors';
 
 interface IArtistProps {
     artist: IArtistModel;
 }
 
 const Artist: FC<IArtistProps> = ({ artist }) => {
+    useMostRatedReleases();
+
     const router = useRouter();
 
     if (router.isFallback) {
@@ -21,7 +32,16 @@ const Artist: FC<IArtistProps> = ({ artist }) => {
 
     return (
         <Page>
-            {`Hello ${artist.name}`}
+            <ToolBar
+                title={artist.name}
+                backRoute={'/'}
+                appendHeader={
+                    <FontAwesomeIcon
+                        icon={faHeart}
+                        color={BLUE}
+                        size={'1x'} />
+                } />
+            <ArtistMainSection {...artist} />
         </Page>
     );
 };
