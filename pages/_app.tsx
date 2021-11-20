@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '@UI/components/index.scss';
+import '@Artists/components/index.scss';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { DefaultLayout } from '@UI/components';
@@ -14,7 +15,7 @@ function MyApp({
 }: AppProps) {
     return (
         <DefaultLayout>
-            <Component {...pageProps} />;
+            <Component {...pageProps} />
         </DefaultLayout>
     );
 }

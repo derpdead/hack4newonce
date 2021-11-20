@@ -16,6 +16,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@Artists/*": [
+        "./modules/artists/*"
+      ],
       "@UI/*": [
         "./modules/ui/*"
       ],

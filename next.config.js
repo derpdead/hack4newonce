@@ -11,6 +11,6 @@ module.exports = {
     `,
   },
   images: {
-    domains: ["ocdn.eu"],
+    domains: ["ocdn.eu", 'cdn.newonce.me'],
   },
 };

@@ -1,3 +1,5 @@
+
+import { PopularArtistsSlider } from '@Artists/components';
 import {
     Page,
     ToolBar,
@@ -5,9 +7,11 @@ import {
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
+
     return (
         <Page>
             <ToolBar title={'Baza muzyczna'} />
+            <PopularArtistsSlider />
         </Page>
     );
 };

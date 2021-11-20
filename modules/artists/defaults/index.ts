@@ -1,0 +1,1 @@
+export const POPULAR_ARTISTS_COLUMNS = 4;
