@@ -1,0 +1,10 @@
+.button {
+	font: $FONT_700_14_16;
+	padding: 12px 24px;
+	border-radius: 100px;
+
+	&--primary {
+		color: $WHITE;
+		background-color: $BLUE;
+	}
+}

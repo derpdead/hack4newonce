@@ -1,9 +1,23 @@
 .popular-artists-slider {
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	width: 100%;
-	height: 400px;
-	padding: 8px;
 	box-sizing: border-box;
 	background: $VIOLET_50;
+
+	&__items {
+		display: flex;
+		height: 250px;
+		padding: 8px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 24px 0;
+	}
 }
