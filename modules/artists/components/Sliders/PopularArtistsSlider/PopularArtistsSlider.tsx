@@ -10,13 +10,20 @@ import { ArtistThumb } from '@Artists/components';
 import { POPULAR_ARTISTS_COLUMNS } from '@Artists/defaults';
 import usePopularArtists from '@Artists/hooks/usePopularArtists';
 import { IArtistModel } from '@Artists/service/models';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useResizeObserver from '@react-hook/resize-observer';
-import { Button } from '@UI/components';
+import {
+    Button,
+    Fab,
+} from '@UI/components';
 import Link from 'next/link';
 import {
     Swiper,
     SwiperSlide,
 } from 'swiper/react';
+
+import { BLACK } from '@/defaults/colors';
 
 const PopularArtistsSlider: FC = () => {
     const popularArtists = usePopularArtists();
@@ -52,6 +59,20 @@ const PopularArtistsSlider: FC = () => {
 
     return (
         <div className={'popular-artists-slider'}>
+            <div className={'popular-artists-slider__header'}>
+                <div className={'popular-artists-slider__extender'} />
+                <span className={'popular-artists-slider__title'}>
+                    Baza muzyczna
+                </span>
+                <div className={'popular-artists-slider__extender'}>
+                    <Fab>
+                        <FontAwesomeIcon
+                            icon={faSearch}
+                            color={BLACK}
+                            size={'1x'} />
+                    </Fab>
+                </div>
+            </div>
             <div
                 className={'popular-artists-slider__items'}
                 ref={ref}>

@@ -6,10 +6,24 @@
 	box-sizing: border-box;
 	background: $VIOLET_50;
 
+	&__header {
+		display: flex;
+		align-items: center;
+		font: $FONT_700_24_28;
+		padding: 24px 12px;
+	}
+
+	&__extender {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
 	&__items {
 		display: flex;
 		height: 250px;
-		padding: 8px;
+		padding: 0 8px;
 		width: 100%;
 		box-sizing: border-box;
 	}

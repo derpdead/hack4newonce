@@ -7,6 +7,7 @@ module.exports = {
     prependData: `
       @import "_fonts.scss"; 
       @import "_colors.scss"; 
+      @import "_borders.scss"; 
       @import "reset.scss"; 
     `,
   },
