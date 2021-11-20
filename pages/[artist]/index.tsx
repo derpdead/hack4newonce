@@ -6,12 +6,18 @@ import {
     getPopularArtists,
 } from '@Artists/service/requests';
 import { Page } from '@UI/components';
+import { useRouter } from 'next/router';
 
 interface IArtistProps {
     artist: IArtistModel;
 }
 
 const Artist: FC<IArtistProps> = ({ artist }) => {
+    const router = useRouter();
+
+    if (router.isFallback) {
+        return <Page>I am loading...</Page>;
+    }
 
     return (
         <Page>
