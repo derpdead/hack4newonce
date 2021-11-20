@@ -1,0 +1,106 @@
+$spacings: (
+	'0-25': 0.25rem,
+	'0-5': 0.5rem,
+	'0-75': 0.75rem,
+	'1': 1rem,
+	'1-5': 1.5rem,
+	'2': 2rem,
+	'2-5': 2.5rem,
+	'3': 3rem,
+	'4': 4rem,
+	'5': 5rem,
+	'10': 10rem,
+	'15': 15rem,
+	'20': 20rem,
+);
+
+$padding-sides: (
+	'l': padding-left,
+	'r': padding-right,
+	't': padding-top,
+	'b': padding-bottom,
+);
+
+$margin-sides: (
+	'l': margin-left,
+	'r': margin-right,
+	't': margin-top,
+	'b': margin-bottom,
+);
+
+@each $space, $value in $spacings {
+	@each $side, $property in $padding-sides {
+		.p#{$side}-#{$space} {
+			#{$property}: $value;
+		}
+	}
+
+	.px-#{$space} {
+		padding-left: $value;
+		padding-right: $value;
+	}
+
+	.py-#{$space} {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+
+	@each $side, $property in $margin-sides {
+		.m#{$side}-#{$space} {
+			#{$property}: $value;
+		}
+	}
+
+	.mx-#{$space} {
+		margin-left: $value;
+		margin-right: $value;
+	}
+
+	.my-#{$space} {
+		margin-top: $value;
+		margin-bottom: $value;
+	}
+}
+
+.py-0 {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.px-0 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+$font-sizes: (
+	10,
+	11,
+	12,
+	13,
+	14,
+	15,
+	16,
+	18,
+	20,
+	24,
+	30,
+);
+
+@each $size in $font-sizes {
+	.f-#{$size} {
+		font: 400 convertPxToRemSize($size) 'Celias', sans-serif;
+	}
+}
+
+$alignments: (
+	center: center,
+	left: left,
+	right: right,
+);
+
+@each $alignment, $value in $alignments {
+	.align-#{$alignment} {
+		align-items: $value;
+		text-align: $value;
+	}
+}

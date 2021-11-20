@@ -1,0 +1,17 @@
+.section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 12px;
+	}
+
+	&__title {
+		font: $FONT_700_18_22;
+		color: $BLACK;
+	}
+}

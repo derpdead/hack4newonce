@@ -1,10 +1,11 @@
 import { FC } from 'react';
 
 import {
+    faBroadcastTower,
     faCompactDisc,
     faCrown,
-    faHamburger,
     faMicrophone,
+    faNewspaper,
 } from '@fortawesome/free-solid-svg-icons';
 import TabBarItem from '@UI/components/TabBar/Item/TabBarItem';
 
@@ -13,11 +14,11 @@ const TabBar: FC = () => {
     return (
         <nav className={'tab-bar'}>
             <TabBarItem
-                icon={faHamburger}
+                icon={faNewspaper}
                 title={'Feed'}
                 href={'/feed'} />
             <TabBarItem
-                icon={faHamburger}
+                icon={faBroadcastTower}
                 title={'Radio'}
                 href={'/radio'} />
             <TabBarItem

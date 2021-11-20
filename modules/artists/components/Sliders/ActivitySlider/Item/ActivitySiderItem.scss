@@ -1,0 +1,28 @@
+.activity-slider-item {
+	border: $BORDER_BLACK;
+	border-radius: 8px;
+	padding: 8px;
+
+	&__header {
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		font: $FONT_700_14_16;
+		color: $BLACK;
+		margin-left: 8px;
+	}
+
+	&__description,
+	&__link {
+		margin-top: 8px;
+		font: $FONT_500_13_16;
+	}
+
+	&__link {
+		text-decoration: underline;
+		width: 100%;
+		text-align: center;
+	}
+}
