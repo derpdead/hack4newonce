@@ -1,9 +1,15 @@
+import {
+    Page,
+    ToolBar,
+} from '@UI/components';
 import type { NextPage } from 'next';
 
-import styles from '../styles/Home.module.css';
-
 const Home: NextPage = () => {
-    return <div className={styles.container} />;
+    return (
+        <Page>
+            <ToolBar title={'Baza muzyczna'} />
+        </Page>
+    );
 };
 
 export default Home;

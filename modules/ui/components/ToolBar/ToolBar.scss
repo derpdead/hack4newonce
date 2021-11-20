@@ -1,0 +1,11 @@
+.tool-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	&__title {
+		font: $FONT_700_24_28;
+		color: #000;
+	}
+}
